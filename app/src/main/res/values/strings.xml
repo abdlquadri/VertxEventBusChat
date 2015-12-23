@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Vertx EventBus Chat Room</string>
+    <string name="app_name">Vertx EB Chat</string>
     <string name="action_settings">Settings</string>
 </resources>

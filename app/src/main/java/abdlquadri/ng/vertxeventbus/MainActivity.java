@@ -95,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            final String[] result = {"hf"};
+            final String[] result = {""};
             final CountDownLatch countDownLatch = new CountDownLatch(1);
-            EventBus.connect("your-server-ip", 7000, new ConnectHandler() {
+            EventBus.connect("192.168.56.1", 7000, new ConnectHandler() {
                 @Override
                 public void connected(boolean isConnected) {
                     if (isConnected) {
@@ -131,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
                         result[0] = getTitle() + " : Not Connected";
 
                     }
+                    countDownLatch.countDown();
+
                 }
             });
             try {
@@ -142,10 +144,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String s) {
+        protected void onPostExecute(final String s) {
 
-            setTitle(s);
+
+                    setTitle(s);
+
         }
+
+
     }
 
 }

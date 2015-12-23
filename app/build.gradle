@@ -30,7 +30,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
-    compile "io.netty:netty-handler:5.0.0.Alpha2"
+
+    compile "io.netty:netty-handler:4.1.0.Beta8"
 
     compile "org.sharegov:mjson:1.3"
 
